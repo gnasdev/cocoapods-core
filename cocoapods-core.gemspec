@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.files         =  Dir["lib/**/*.rb"] + %w{ README.md LICENSE }
   s.require_paths =  %w{ lib }
 
-  s.add_runtime_dependency 'activesupport', '>= 5.0', '< 8'
+  # 8.0.5.2 is the first public release that patches GHSA-8474-xrp6-wh69. 8.1 is untested here.
+  s.add_runtime_dependency 'activesupport', '>= 8.0.5.2', '< 8.1'
   s.add_runtime_dependency 'nap', '~> 1.0'
   s.add_runtime_dependency 'fuzzy_match', '~> 2.0.4'
   s.add_runtime_dependency 'algoliasearch', '~> 1.0'
